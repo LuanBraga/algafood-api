@@ -23,6 +23,6 @@ public class  MeuPrimeiroController {
 
         ativacaoClienteService.ativar(joao);
 
-        return joao.getEmail();
+        return joao.getTelefone();
     }
 }
