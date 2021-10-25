@@ -9,6 +9,7 @@ import javax.persistence.TypedQuery;
 import com.algaworks.algafoodapi.domain.model.Cozinha;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class CadastroCozinha {
@@ -20,5 +21,14 @@ public class CadastroCozinha {
         TypedQuery<Cozinha> query =  manager.createQuery("from Cozinha", Cozinha.class);
 
         return query.getResultList();
+    }
+
+    public Cozinha buscar(Long id) {
+        return manager.find(Cozinha.class, id);
+    }
+
+    @Transactional
+    public Cozinha adcionar(Cozinha cozinha) {
+       return manager.merge(cozinha);
     }
 }
