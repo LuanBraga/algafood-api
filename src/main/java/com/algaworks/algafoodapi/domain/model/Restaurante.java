@@ -1,5 +1,6 @@
 package com.algaworks.algafoodapi.domain.model;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -9,24 +10,28 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Cozinha {
-
+public class Restaurante {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column
     private String nome;
 
-    public Long getId() {
+    @Column
+    private BigDecimal taxaFrete;
+
+
+    public int getId() {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getNome(){
+    public String getNome() {
         return this.nome;
     }
 
@@ -34,20 +39,29 @@ public class Cozinha {
         this.nome = nome;
     }
 
+    public BigDecimal getTaxaFrete() {
+        return this.taxaFrete;
+    }
+
+    public void setTaxaFrete(BigDecimal taxaFrete) {
+        this.taxaFrete = taxaFrete;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof Cozinha)) {
+        if (!(o instanceof Restaurante)) {
             return false;
         }
-        Cozinha cozinha = (Cozinha) o;
-        return Objects.equals(id, cozinha.id) && Objects.equals(nome, cozinha.nome);
+        Restaurante restaurante = (Restaurante) o;
+        return id == restaurante.id && Objects.equals(nome, restaurante.nome) && Objects.equals(taxaFrete, restaurante.taxaFrete);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome);
+        return Objects.hash(id, nome, taxaFrete);
     }
 
 }
