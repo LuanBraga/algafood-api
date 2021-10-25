@@ -1,7 +1,5 @@
 package com.algaworks.algafoodapi.jpa;
 
-import java.util.List;
-
 import com.algaworks.algafoodapi.AlgafoodApiApplication;
 import com.algaworks.algafoodapi.domain.model.Cozinha;
 
