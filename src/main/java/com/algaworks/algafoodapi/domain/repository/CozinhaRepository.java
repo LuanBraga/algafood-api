@@ -1,4 +1,4 @@
-package com.algaworks.algafoodapi.domain.model.repository;
+package com.algaworks.algafoodapi.domain.repository;
 
 import java.util.List;
 
