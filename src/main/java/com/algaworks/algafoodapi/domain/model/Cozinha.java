@@ -1,53 +1,25 @@
 package com.algaworks.algafoodapi.domain.model;
 
-import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 @Entity
+@Data
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Cozinha {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Long id;
 
     @Column
     private String nome;
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome(){
-        return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof Cozinha)) {
-            return false;
-        }
-        Cozinha cozinha = (Cozinha) o;
-        return Objects.equals(id, cozinha.id) && Objects.equals(nome, cozinha.nome);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nome);
-    }
 
 }

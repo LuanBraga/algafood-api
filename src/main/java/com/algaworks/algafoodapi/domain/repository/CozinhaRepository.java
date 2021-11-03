@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.algaworks.algafoodapi.domain.model.Cozinha;
 
+
 public interface CozinhaRepository {
     
     List<Cozinha> listar();
