@@ -1,4 +1,5 @@
 package com.algaworks.algafoodapi.domain.repository;
+
 import java.util.List;
 
 import com.algaworks.algafoodapi.domain.model.Restaurante;
@@ -9,7 +10,7 @@ public interface RestauranteRepository {
 
     Restaurante buscar(Long id);
 
-    Restaurante salvar(Restaurante Restaurante);
+    Restaurante salvar(Restaurante restaurante);
 
-    void remover(Restaurante Restaurante);
+    void remover(Restaurante restaurante);
 }
