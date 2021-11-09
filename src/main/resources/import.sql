@@ -9,3 +9,9 @@ insert into restaurante (nome, taxa_frete, cozinha_id) values ('Podrão da Esqui
 insert into restaurante (nome, taxa_frete, cozinha_id) values ('Mec Pombo', 9.50, 1);
 insert into restaurante (nome, taxa_frete, cozinha_id) values ('Pastel de Flango do Xi Jinping', 15, 3);
 
+insert into forma_pagamento (descricao) values ('Cartão de crédito');
+insert into forma_pagamento (descricao) values ('Cartão de débito');
+insert into forma_pagamento (descricao) values ('Pix');
+
+
+
