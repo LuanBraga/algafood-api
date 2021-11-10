@@ -14,4 +14,8 @@ insert into forma_pagamento (descricao) values ('Cartão de débito');
 insert into forma_pagamento (descricao) values ('Pix');
 
 
+insert into estado (nome) values ('Rio de Janeiro');
+insert into estado (nome) values ('São Paulo');
+insert into estado (nome) values ('Mina Gerais');
+insert into estado (nome) values ('Espírito Santo');
 
