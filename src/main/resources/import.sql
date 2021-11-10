@@ -19,3 +19,12 @@ insert into estado (nome) values ('São Paulo');
 insert into estado (nome) values ('Mina Gerais');
 insert into estado (nome) values ('Espírito Santo');
 
+insert into cidade (nome) values ('Queimados');
+insert into cidade (nome) values ('Nova Iguaçu');
+insert into cidade (nome) values ('Belford Roxo');
+insert into cidade (nome) values ('Caxias');
+insert into cidade (nome) values ('Rio de Janeiro');
+
+
+
+
