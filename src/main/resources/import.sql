@@ -13,7 +13,6 @@ insert into forma_pagamento (descricao) values ('Cartão de crédito');
 insert into forma_pagamento (descricao) values ('Cartão de débito');
 insert into forma_pagamento (descricao) values ('Pix');
 
-
 insert into estado (nome) values ('Rio de Janeiro');
 insert into estado (nome) values ('São Paulo');
 insert into estado (nome) values ('Mina Gerais');
@@ -25,6 +24,8 @@ insert into cidade (nome) values ('Belford Roxo');
 insert into cidade (nome) values ('Caxias');
 insert into cidade (nome) values ('Rio de Janeiro');
 
+insert into permissao (nome, descricao) values ('CONSULTAR_COZINHAS', 'Permite consultar cozinhas');
+insert into permissao (nome, descricao) values ('EDITAR_COZINHAS', 'Permite editar cozinhas');
 
 
 
